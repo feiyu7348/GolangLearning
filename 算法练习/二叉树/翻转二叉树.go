@@ -2,4 +2,4 @@
 
 package main
 
-var a int = 3
+var a int = 4
