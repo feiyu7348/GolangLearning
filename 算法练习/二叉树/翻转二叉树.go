@@ -2,4 +2,4 @@
 
 package main
 
-var a int = 114
+var a int = 11
