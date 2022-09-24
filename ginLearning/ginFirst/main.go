@@ -3,8 +3,9 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
 func pong(c *gin.Context) {
@@ -18,8 +19,6 @@ func main() {
 	r.GET("/ping", pong)
 	err := r.Run(":8083")
 	if err != nil {
-		return 
+		return
 	}
 }
-
-
