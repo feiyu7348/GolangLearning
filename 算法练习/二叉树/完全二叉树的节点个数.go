@@ -2,4 +2,4 @@
 
 package main
 
-var a = 123
+var a = 1234
