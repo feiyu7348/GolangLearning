@@ -71,7 +71,11 @@ func inorderTraversal2(root *TreeNode) []int {
 	return res
 }
 
-// 后续遍历
+/* postorderTraversal2
+*  @Description: 后序遍历
+*  @param root 根节点
+*  @return []int
+ */
 func postorderTraversal2(root *TreeNode) []int {
 	if root == nil {
 		return nil
