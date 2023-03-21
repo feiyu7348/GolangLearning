@@ -3,10 +3,10 @@
 package main
 
 //definition for a binary tree node.
-type treenode struct {
+type treeNode struct {
 	val   int
-	left  *treenode
-	right *treenode
+	left  *treeNode
+	right *treeNode
 }
 
 func max(a, b int) int {
@@ -17,17 +17,17 @@ func max(a, b int) int {
 }
 
 // 递归
-func maxdepth1(root *treenode) int {
+func maxDepth1(root *treeNode) int {
 	if root == nil {
 		return 0
 	}
-	return max(maxdepth(root.left), maxdepth(root.right)) + 1
+	return max(maxDepth(root.left), maxDepth(root.right)) + 1
 }
 
 // 遍历
-func maxdepth(root *treenode) int {
+func maxDepth(root *treeNode) int {
 	levl := 0
-	queue := make([]*treenode, 0)
+	queue := make([]*treeNode, 0)
 	if root != nil {
 		queue = append(queue, root)
 	}
