@@ -1,4 +1,4 @@
-module example.com/mod
+module GolangLearning/library
 
 go 1.18
 
