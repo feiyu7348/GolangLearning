@@ -2,10 +2,11 @@
 
 package main
 
-import "GolangLearning/library/cobra-learn/daylib"
+import "GolangLearning/library/cobra-learn/cobraday"
 
 func main() {
-	//daylib.CobraName()
-	//daylib.CobraFlags()
-	daylib.TwoArgs()
+	//cobraday.CobraName()
+	//cobraday.CobraFlags()
+	//cobraday.TwoArgs()
+	cobraday.AddCobra()
 }

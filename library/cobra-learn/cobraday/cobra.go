@@ -1,6 +1,6 @@
 // author:zfy  date:2023/3/21
 
-package daylib
+package cobraday
 
 import (
 	"fmt"

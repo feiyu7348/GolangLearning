@@ -1,6 +1,6 @@
 // author:zfy  date:2023/3/22
 
-package daylib
+package cobraday
 
 import (
 	"fmt"
@@ -40,5 +40,6 @@ func listPnic(_ *cobra.Command, args []string) error {
 		println(v)
 	}
 
+	log.Printf("mtu: %d", mtu)
 	return nil
 }
