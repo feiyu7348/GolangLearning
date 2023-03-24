@@ -36,7 +36,6 @@ func main() {
 	fmt.Printf("3: nil=%t, len=%d, cap=%d\n", s == nil, len(s), cap(s))
 	fmt.Println(s)
 
-	s = new([{}, {]])
 	fmt.Println(s)
 
 }
