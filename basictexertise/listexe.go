@@ -2,40 +2,36 @@
 
 package main
 
-import (
-	"container/list"
-	"fmt"
-)
+import "fmt"
 
-type person2 struct {
-	name string
-	age  int
+func removeItem(a []int, elem int) []int {
+	j := 0
+	for _, v := range a {
+		if v != elem {
+			a[j] = v
+			j++
+		}
+	}
+
+	return a[:j]
+}
+
+func removeItem1(a []int, elem int) []int {
+	var aNew []int
+	for _, v := range a {
+		if v != elem {
+			aNew = append(aNew, v)
+		}
+	}
+
+	return aNew
 }
 
 func main() {
-	t := list.New()
-	//var s []string
-	var p []person2
-
-	fmt.Println(t)
-	//fmt.Println(s)
-	fmt.Println(p)
-
-	//定义变量
-	var s []string
-	fmt.Printf("1:nil=%t, len=%d, cap=%d\n", s == nil, len(s), cap(s))
-	fmt.Println(s)
-
-	//组合字面量方式
-	s = []string{}
-	fmt.Printf("2:nil=%t, len=%d, cap=%d\n", s == nil, len(s), cap(s))
-	fmt.Println(s)
-
-	//make方式
-	s = make([]string, 0)
-	fmt.Printf("3: nil=%t, len=%d, cap=%d\n", s == nil, len(s), cap(s))
-	fmt.Println(s)
-
-	fmt.Println(s)
-
+	a := []int{1, 2, 3, 4}
+	elem := 2
+	fmt.Println(removeItem(a, elem))
+	b := []int{1, 2, 3, 4}
+	elemb := 2
+	fmt.Println(removeItem1(b, elemb))
 }
