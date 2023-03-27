@@ -6,8 +6,6 @@
         <entryData>
           <resourceRoots>
             <path value="file://$PROJECT_DIR$/library/daylib" />
-            <path value="file://$PROJECT_DIR$/gozero" />
-            <path value="file://$PROJECT_DIR$/gozero/helloworld" />
             <path value="file://$PROJECT_DIR$/gozero/helloworld/hello/internal/config" />
             <path value="file://$PROJECT_DIR$" />
           </resourceRoots>
