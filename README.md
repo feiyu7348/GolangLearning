@@ -2,6 +2,10 @@
 
 学习Golang的过程
 
+## 学习资源
+
+- http://m.mszlu.com/go/base/01/01.html#_1-go%E5%8E%86%E5%8F%B2
+
 ## 搭建框架
 
 - VsCode 成功
