@@ -3,26 +3,29 @@
 package cobraday
 
 import (
+	"errors"
 	"fmt"
-	"github.com/spf13/cobra"
 	"log"
 	"os"
+	"regexp"
+	"strconv"
+	"strings"
+
+	"github.com/spf13/cobra"
 )
 
-var gro string
-var mtu int
+var cpu string
 
 func TwoArgs() {
 	rootCmd := &cobra.Command{
 		Use:   "pnic [eth0]",
 		Short: "pnic",
 		Long:  "pnic",
-		Args:  cobra.MinimumNArgs(2),
+		Args:  cobra.MinimumNArgs(1),
 		RunE:  listPnic,
 	}
 
-	rootCmd.Flags().StringVarP(&gro, "gro", "g", "off", "set gro")
-	rootCmd.Flags().IntVarP(&mtu, "mtu", "m", 0, "set mtu")
+	rootCmd.Flags().StringVarP(&cpu, "cpu", "c", "", "input cpu list")
 
 	if err := rootCmd.Execute(); err != nil {
 		fmt.Println(err)
@@ -33,16 +36,49 @@ func TwoArgs() {
 func listPnic(_ *cobra.Command, args []string) error {
 	if args == nil {
 		log.Printf("args is nil: %s", args)
-		return nil
+		return errors.New("args is nil")
 	}
 
-	fmt.Printf("args: %s\n", args)
-	//cpuList := make([]string, 0)
-	for _, v := range args {
-		fmt.Println(v)
-
+	log.Printf("args: %s\n", args)
+	// 匹配网卡名称
+	pnicRe, err := regexp.MatchString("^eth\\d{1,4}$", args[0])
+	if err != nil {
+		log.Fatal(err)
+		return err
 	}
 
-	log.Printf("mtu: %d", mtu)
+	if pnicRe {
+		pnic := args[0]
+		log.Printf("pnic: %s\n", pnic)
+	} else {
+		log.Println("please input the correct nic name!")
+		return errors.New("nic name error")
+	}
+
+	cpuList := make([]string, 0)
+	re, err := regexp.Compile("\\d-\\d")
+	if err != nil {
+		log.Fatal(err)
+		return err
+	}
+
+	log.Printf("arg[1:]: %s", args[1:])
+	for _, v := range args[1:] {
+		found := re.MatchString(v)
+		if found {
+			l := strings.Split(v, "-")
+			startInt, _ := strconv.Atoi(l[0])
+			endInt, _ := strconv.Atoi(l[1])
+			for i := startInt; i <= endInt; i++ {
+				cpu := strconv.Itoa(i)
+				cpuList = append(cpuList, cpu)
+			}
+		} else {
+			cpuList = append(cpuList, v)
+		}
+	}
+
+	log.Printf("cpuList: %v\n", cpuList)
+
 	return nil
 }

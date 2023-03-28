@@ -28,10 +28,13 @@ func removeItem1(a []int, elem int) []int {
 }
 
 func main() {
-	a := []int{1, 2, 3, 4}
-	elem := 2
-	fmt.Println(removeItem(a, elem))
-	b := []int{1, 2, 3, 4}
-	elemb := 2
-	fmt.Println(removeItem1(b, elemb))
+	//a := []int{1, 2, 3, 4}
+	//elem := 2
+	//fmt.Println(removeItem(a, elem))
+	//b := []int{1, 2, 3, 4}
+	//elemb := 2
+	//fmt.Println(removeItem1(b, elemb))
+
+	array := []string{"eth0"}
+	fmt.Println(array[1])
 }
