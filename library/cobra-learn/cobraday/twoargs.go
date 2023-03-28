@@ -17,7 +17,7 @@ func TwoArgs() {
 		Use:   "pnic [eth0]",
 		Short: "pnic",
 		Long:  "pnic",
-		Args:  cobra.MinimumNArgs(1),
+		Args:  cobra.MinimumNArgs(2),
 		RunE:  listPnic,
 	}
 
@@ -36,8 +36,11 @@ func listPnic(_ *cobra.Command, args []string) error {
 		return nil
 	}
 
+	fmt.Printf("args: %s\n", args)
+	//cpuList := make([]string, 0)
 	for _, v := range args {
-		println(v)
+		fmt.Println(v)
+
 	}
 
 	log.Printf("mtu: %d", mtu)
