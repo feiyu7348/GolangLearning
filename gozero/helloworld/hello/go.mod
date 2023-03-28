@@ -1,4 +1,4 @@
-module GolangLearning/gozero/helloworld/hello
+module hello
 
 go 1.18
 

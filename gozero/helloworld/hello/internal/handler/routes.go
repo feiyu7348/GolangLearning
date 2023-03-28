@@ -4,9 +4,9 @@ package handler
 import (
 	"net/http"
 
-	"GolangLearning/gozero/helloworld/hello/internal/svc"
-
 	"github.com/zeromicro/go-zero/rest"
+
+	"hello/internal/svc"
 )
 
 func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {

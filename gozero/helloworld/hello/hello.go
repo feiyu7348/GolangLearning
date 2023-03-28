@@ -4,9 +4,9 @@ import (
 	"flag"
 	"fmt"
 
-	"GolangLearning/gozero/helloworld/hello/internal/config"
-	"GolangLearning/gozero/helloworld/hello/internal/handler"
-	"GolangLearning/gozero/helloworld/hello/internal/svc"
+	"hello/internal/config"
+	"hello/internal/handler"
+	"hello/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/rest"

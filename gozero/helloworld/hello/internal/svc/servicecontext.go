@@ -1,7 +1,7 @@
 package svc
 
 import (
-	"GolangLearning/gozero/helloworld/hello/internal/config"
+	"hello/internal/config"
 )
 
 type ServiceContext struct {

@@ -3,10 +3,10 @@ package logic
 import (
 	"context"
 
-	"GolangLearning/gozero/helloworld/hello/internal/svc"
-	"GolangLearning/gozero/helloworld/hello/internal/types"
-
 	"github.com/zeromicro/go-zero/core/logx"
+
+	"hello/internal/svc"
+	"hello/internal/types"
 )
 
 type HelloLogic struct {
