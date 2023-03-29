@@ -4,7 +4,9 @@
 
 ## 学习资源
 
-- http://m.mszlu.com/go/base/01/01.html#_1-go%E5%8E%86%E5%8F%B2
+- [码神之路学习体系](http://m.mszlu.com/go/base/01/01.html#_1-go%E5%8E%86%E5%8F%B2)
+- [比较全的网址](https://www.topgoer.com/)
+- [常用标准库](https://books.studygolang.com/The-Golang-Standard-Library-by-Example/)
 
 ## 搭建框架
 
