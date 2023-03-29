@@ -5,6 +5,7 @@ package cobraday
 import (
 	"fmt"
 	"os"
+	"strconv"
 
 	"github.com/spf13/cobra"
 )
@@ -17,6 +18,11 @@ func CobraName() {
 		Short: "pnic",
 		Long:  "pnic",
 		Run: func(cmd *cobra.Command, args []string) {
+			for _, v := range args[1:] {
+				_, err := strconv.ParseFloat(v, 64)
+				fmt.Println(err == nil)
+			}
+
 			fmt.Printf("pnic %s", name)
 		},
 	}
