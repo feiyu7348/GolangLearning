@@ -35,6 +35,8 @@ func main() {
 	//elemb := 2
 	//fmt.Println(removeItem1(b, elemb))
 
-	array := []string{"eth0"}
-	fmt.Println(array[1])
+	var array []int
+	a := 1
+	array = append(array, a)
+	fmt.Println(array)
 }

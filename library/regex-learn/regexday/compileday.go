@@ -9,9 +9,11 @@ import (
 )
 
 func CompileDay() {
-	words := [...]string{"Seven", "even", "Maven", "Amen", "eleven"}
+	words := [...]string{"1", "2", "3", "4", "5", "6"}
 	// 编译的正则表达式
-	re, err := regexp.Compile(".even")
+	cpu := "0-5"
+	//a := "[cpu]"
+	re, err := regexp.Compile(cpu)
 	if err != nil {
 		log.Fatal(err)
 	}

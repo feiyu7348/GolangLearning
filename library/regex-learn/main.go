@@ -6,7 +6,7 @@ import "GolangLearning/library/regex-learn/regexday"
 
 func main() {
 	//regexday.MatchString()
-	//regexday.CompileDay()
+	regexday.CompileDay()
 	//regexday.ZfyExec()
-	regexday.SplitDay()
+	//regexday.SplitDay()
 }
