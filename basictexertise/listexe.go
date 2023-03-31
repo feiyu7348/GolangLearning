@@ -35,8 +35,33 @@ func main() {
 	//elemb := 2
 	//fmt.Println(removeItem1(b, elemb))
 
-	var array []int
+	var arrayA []int
+	fmt.Printf("arrayA: %d\n", arrayA)
+	if arrayA == nil {
+		fmt.Println("arrayA is nil")
+	}
+
+	arrayB := make([]int, 0)
+	fmt.Printf("arrayB: %d\n", arrayB)
+	if arrayB == nil {
+		fmt.Println("arrayB is nil")
+	}
+
+	arrayC := []int{}
+	fmt.Printf("arrayC: %d\n", arrayC)
+	if arrayC == nil {
+		fmt.Println("arrayC is nil")
+	}
+
 	a := 1
-	array = append(array, a)
-	fmt.Println(array)
+	arrayA = append(arrayA, a)
+	fmt.Printf("arrayA: %d\n", arrayA)
+
+	b := 2
+	arrayB = append(arrayB, b)
+	fmt.Printf("arrayB: %d\n", arrayB)
+
+	c := 3
+	arrayC = append(arrayC, c)
+	fmt.Printf("arrayC: %d\n", arrayC)
 }
