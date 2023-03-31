@@ -1,6 +1,6 @@
 // author:zfy  date:2023/3/29
 
-package stringtoint
+package inttostring
 
 import (
 	"fmt"
