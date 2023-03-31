@@ -62,6 +62,7 @@ func main() {
 	fmt.Printf("arrayB: %d\n", arrayB)
 
 	c := 3
-	arrayC = append(arrayC, c)
+	d := 4
+	arrayC = append(arrayC, c, d)
 	fmt.Printf("arrayC: %d\n", arrayC)
 }
