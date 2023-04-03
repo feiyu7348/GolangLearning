@@ -27,42 +27,25 @@ func removeItem1(a []int, elem int) []int {
 	return aNew
 }
 
+func ListElemBelongToOtherList(a []string, elems []string) bool {
+	mapA := make(map[string]int)
+	for i, v := range a {
+		mapA[v] = i
+	}
+
+	for _, elem := range elems {
+		if _, ok := mapA[elem]; ok {
+			continue
+		} else {
+			return false
+		}
+	}
+
+	return true
+}
+
 func main() {
-	//a := []int{1, 2, 3, 4}
-	//elem := 2
-	//fmt.Println(removeItem(a, elem))
-	//b := []int{1, 2, 3, 4}
-	//elemb := 2
-	//fmt.Println(removeItem1(b, elemb))
-
-	var arrayA []int
-	fmt.Printf("arrayA: %d\n", arrayA)
-	if arrayA == nil {
-		fmt.Println("arrayA is nil")
-	}
-
-	arrayB := make([]int, 0)
-	fmt.Printf("arrayB: %d\n", arrayB)
-	if arrayB == nil {
-		fmt.Println("arrayB is nil")
-	}
-
-	arrayC := []int{}
-	fmt.Printf("arrayC: %d\n", arrayC)
-	if arrayC == nil {
-		fmt.Println("arrayC is nil")
-	}
-
-	a := 1
-	arrayA = append(arrayA, a)
-	fmt.Printf("arrayA: %d\n", arrayA)
-
-	b := 2
-	arrayB = append(arrayB, b)
-	fmt.Printf("arrayB: %d\n", arrayB)
-
-	c := 3
-	d := 4
-	arrayC = append(arrayC, c, d)
-	fmt.Printf("arrayC: %d\n", arrayC)
+	a := []string{"1", "2", "3"}
+	b := []string{"1", "2"}
+	fmt.Println(ListElemBelongToOtherList(a, b))
 }
