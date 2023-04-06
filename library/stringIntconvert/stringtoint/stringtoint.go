@@ -13,6 +13,7 @@ func StringToInt() {
 	sInt, _ := strconv.Atoi(s)
 
 	sInt64, err := strconv.ParseInt(s, 10, 64)
+	sUint32 := uint32(sInt64)
 	if err != nil {
 		log.Println(err)
 	}
@@ -21,5 +22,6 @@ func StringToInt() {
 
 	fmt.Println(sInt)
 	fmt.Println(sInt64)
+	fmt.Println(sUint32)
 	fmt.Println(sFloat64)
 }

@@ -4,6 +4,7 @@
 package main
 
 import (
+	"bytes"
 	"errors"
 	"fmt"
 )
@@ -14,13 +15,25 @@ type fileError struct {
 
 func main() {
 	errs := make([]error, 0)
-	errs = append(errs, errors.New("123"))
-	errs = append(errs, errors.New("456"))
+	//errs = append(errs, errors.New("123"))
+	//errs = append(errs, errors.New("456"))
 
-	var errsString string
+	//var errsString string
+	//for _, v := range errs {
+	//	errsString += v.Error() + "\n"
+	//}
+	//
+	//if errsString != "" {
+	//	fmt.Println(errors.New(errsString))
+	//} else {
+	//	fmt.Println(nil)
+	//}
+
+	buf := new(bytes.Buffer)
+	fmt.Printf("buf: %s", buf)
 	for _, v := range errs {
-		errsString += v.Error() + "\n"
+		buf.WriteString(v.Error() + "\n")
 	}
 
-	fmt.Println(errsString)
+	fmt.Println(errors.New(buf.String()))
 }

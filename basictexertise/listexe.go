@@ -44,8 +44,17 @@ func ListElemBelongToOtherList(a []string, elems []string) bool {
 	return true
 }
 
+func isNil(a []string) {
+	for _, v := range a {
+		fmt.Println(v)
+	}
+}
+
 func main() {
-	a := []string{"1", "2", "3"}
-	b := []string{"1", "2"}
-	fmt.Println(ListElemBelongToOtherList(a, b))
+	var a []string
+	//a := make([]string, 0)
+	if len(a) != 0 {
+		fmt.Println(a[0])
+	}
+	fmt.Println(a)
 }
