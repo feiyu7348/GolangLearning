@@ -36,4 +36,9 @@ func main() {
 	}
 
 	fmt.Println(errors.New(buf.String()))
+	if len(buf.String()) == 0 {
+		fmt.Println(nil)
+	} else {
+		fmt.Println("not nil")
+	}
 }

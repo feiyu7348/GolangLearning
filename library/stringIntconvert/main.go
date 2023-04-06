@@ -2,8 +2,11 @@
 
 package main
 
-import "GolangLearning/library/stringIntconvert/stringtoint"
+import (
+	"GolangLearning/library/stringIntconvert/inttostring"
+)
 
 func main() {
-	stringtoint.StringToInt()
+	//stringtoint.StringToInt()
+	inttostring.IntToString()
 }

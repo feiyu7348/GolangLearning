@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 type person struct {
@@ -11,14 +12,17 @@ type person struct {
 	age  int
 }
 
+var a = "titleNow"
+
 func main() {
-	var s []person
-	p := person{
-		name: "",
-		age:  18,
-	}
+	//var s []person
+	//p := person{
+	//	name: "",
+	//	age:  18,
+	//}
+	//
+	//s = append(s, p)
 
-	s = append(s, p)
-
-	fmt.Println(s)
+	fmt.Println(strings.ToUpper(a))
+	fmt.Println(strings.ToUpper(a[:1]) + a[1:])
 }
