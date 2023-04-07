@@ -25,4 +25,10 @@ func main() {
 
 	fmt.Println(strings.ToUpper(a))
 	fmt.Println(strings.ToUpper(a[:1]) + a[1:])
+	s := []string{"1", "2", "3"}
+	var builder strings.Builder
+	for _, v := range s {
+		builder.WriteString(v + "\n")
+	}
+	fmt.Println(builder.String())
 }
