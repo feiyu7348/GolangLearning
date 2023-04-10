@@ -3,7 +3,7 @@
 
 package main
 
-import "GolangLearning/library/flag-learn/flagday"
+import "GolangLearning/library/flag_learn/flagday"
 
 func main() {
 	flagday.FlagBool()

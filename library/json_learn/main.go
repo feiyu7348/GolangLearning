@@ -2,7 +2,7 @@
 
 package main
 
-import "GolangLearning/library/json-learn/jsonday"
+import "GolangLearning/library/json_learn/jsonday"
 
 func main() {
 	jsonday.MapToJson()
