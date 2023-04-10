@@ -2,11 +2,15 @@
 
 package main
 
-import "GolangLearning/library/json_learn/jsonday"
+import (
+	"GolangLearning/library/json_learn/unmarshalday"
+)
 
 func main() {
-	jsonday.MapToJson()
-	jsonday.StructToJson()
-	jsonday.ListToJson()
-	jsonday.PrettyPrint()
+	//jsonday.MapToJson()
+	//jsonday.StructToJson()
+	//jsonday.ListToJson()
+	//jsonday.PrettyPrint()
+	//unmarshalday.JsonDay()
+	unmarshalday.JsonDay1()
 }
