@@ -2,7 +2,7 @@
 
 package main
 
-import "GolangLearning/library/cobra-learn/cobraday"
+import "GolangLearning/library/cobra_learn/cobraday"
 
 func main() {
 	//cobraday.CobraName()

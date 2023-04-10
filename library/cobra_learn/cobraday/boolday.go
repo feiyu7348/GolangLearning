@@ -32,10 +32,10 @@ func CobraBool() {
 }
 
 /*
-PS E:\GitHub\GolangLearning\library\cobra-learn> go run .\main.go eth0
+PS E:\GitHub\GolangLearning\library\cobra_learn> go run .\main.go eth0
 pnic false
 Echo: eth0
-PS E:\GitHub\GolangLearning\library\cobra-learn> go run .\main.go eth0 --DB
+PS E:\GitHub\GolangLearning\library\cobra_learn> go run .\main.go eth0 --DB
 pnic true
 Echo: eth0
 */
