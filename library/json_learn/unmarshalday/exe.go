@@ -13,24 +13,30 @@ type Country struct {
 	ID      string `json:"id"`
 }
 
-type Window struct {
-	Width   uint64     `json:"width"`
-	Height  uint64     `json:"height"`
-	Title   []string   `json:"title"`
-	country []*Country `json:"country"`
+type CountryV1 struct {
+	Address string `json:"address"`
+	ID      string `json:"id"`
 }
 
-type Mac struct {
+type Window struct {
 	Width   int        `json:"width"`
 	Height  int        `json:"height"`
 	Title   []string   `json:"title"`
-	country []*Country `json:"country"`
+	Country []*Country `json:"country"`
+}
+
+type Mac struct {
+	Width   int          `json:"width"`
+	Title   []string     `json:"title"`
+	Height  int          `json:"height"`
+	Country []*CountryV1 `json:"country"`
 }
 
 func UnmarshalDay(mac *Mac) *Window {
 	var window *Window
 
 	bytes, _ := json.Marshal(mac)
+	fmt.Println(bytes)
 	err := json.Unmarshal(bytes, &window)
 	if err != nil {
 		fmt.Println("JSON decode error!")
@@ -45,9 +51,14 @@ func JsonDay1() {
 		Width:   1,
 		Height:  2,
 		Title:   []string{"3", "4"},
-		country: []*Country{{"1", "2"}, {"2", "3"}},
+		Country: []*CountryV1{{"1", "2"}, {"2", "3"}},
 	}
 
 	window := UnmarshalDay(mac)
-	fmt.Printf("%+v", window)
+	fmt.Printf("%+v\n", window)
+	fmt.Printf("%+v\n", window.Country)
+	for _, v := range window.Country {
+		fmt.Println(v)
+	}
+
 }
