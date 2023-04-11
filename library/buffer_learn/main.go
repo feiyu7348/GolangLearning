@@ -6,5 +6,6 @@ package main
 import "GolangLearning/library/buffer_learn/bufferday"
 
 func main() {
-	bufferday.BufferInit()
+	//bufferday.BufferInit()
+	bufferday.NewBufferDay()
 }
