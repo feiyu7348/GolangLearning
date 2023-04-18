@@ -28,6 +28,6 @@ func (w Work) ShowB() int {
 func main() {
 	var a A = Work{3}
 	s := a.(Work)
-	fmt.Println(s.ShowA())
-	fmt.Println(s.ShowB())
+	fmt.Println(s.ShowA()) // 13
+	fmt.Println(s.ShowB()) // 23
 }

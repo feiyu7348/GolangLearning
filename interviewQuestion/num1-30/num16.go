@@ -32,3 +32,5 @@ func main() {
 	fmt.Println(a.ShowB())
 	fmt.Println(b.ShowA())
 }
+
+// 报错
