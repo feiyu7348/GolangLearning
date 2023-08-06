@@ -17,7 +17,13 @@ func pong(c *gin.Context) {
 func main() {
 	r := gin.Default()
 	r.GET("/ping", pong)
-	err := r.Run(":8083")
+	//err := r.Run(":8083")
+	//if err != nil {
+	//	return
+	//}
+
+	// 原生http方式
+	err := http.ListenAndServe(":8083", r)
 	if err != nil {
 		return
 	}
