@@ -22,7 +22,9 @@ func main() {
 			log.Println(file.Filename)
 
 			// 上传文件至指定目录
-			c.SaveUploadedFile(file, dst)
+			if err := c.SaveUploadedFile(file, "./"+file.Filename); err != nil {
+				return
+			}
 		}
 		c.String(http.StatusOK, fmt.Sprintf("%d files uploaded!", len(files)))
 	})
