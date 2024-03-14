@@ -35,3 +35,22 @@ func main() {
 	r := Quick(s, 0, right)
 	fmt.Println(r)
 }
+
+func quickSort(s []int) []int {
+	if len(s) < 2 {
+		return s
+	}
+
+	pivot := s[0]
+	left, right := make([]int, 0), make([]int, 0)
+	for _, ele := range s[1:] {
+		if ele <= pivot {
+			left = append(left, ele)
+		} else {
+			right = append(right, ele)
+		}
+	}
+
+	return append(quickSort(left),
+		append([]int{pivot}, quickSort(right)...)...)
+}
