@@ -31,7 +31,7 @@ func Num3() {
 	x := []int{1, 2, 3}
 	func(arr []int) {
 		arr[0] = 7
-		fmt.Println(x) // [7 2 3]
+		fmt.Println(arr) // [7 2 3]
 	}(x)
 	fmt.Println(x) // [7 2 3]
 }
