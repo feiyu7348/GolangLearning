@@ -2,6 +2,8 @@
 
 package main
 
+import "strings"
+
 func reverseWords(s string) string {
 	//1.使用双指针删除冗余的空格
 	slowIndex, fastIndex := 0, 0
@@ -82,4 +84,18 @@ func reverseWords1(s string) string {
 	}
 
 	return string(b)
+}
+
+func reverseWords151(s string) string {
+	ss := strings.Fields(s)
+	reverse151(&ss, 0, len(ss)-1)
+	return strings.Join(ss, " ")
+}
+
+func reverse151(m *[]string, i int, j int) {
+	for i <= j {
+		(*m)[i], (*m)[j] = (*m)[j], (*m)[i]
+		i++
+		j--
+	}
 }
