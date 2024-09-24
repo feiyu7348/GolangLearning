@@ -31,7 +31,6 @@ func GetArticleLikes(ctx *gin.Context) {
 	likeKey := "article:" + articleID + ":likes"
 
 	likes, err := global.RedisDB.Get(likeKey).Result()
-
 	if errors.Is(err, redis.Nil) {
 		likes = "0"
 	} else if err != nil {
