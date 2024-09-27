@@ -8,4 +8,7 @@ import (
 
 func main() { // main函数，是程序执行的入口
 	fmt.Println("Hello World!") // 在终端打印 Hello World!
+	var m1 map[string]string
+	m1["1"] = "1"
+	fmt.Println(m1["1"])
 }
