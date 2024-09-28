@@ -4,8 +4,9 @@ package models
 
 import (
 	"context"
-	"go.mongodb.org/mongo-driver/bson"
 	"log"
+
+	"go.mongodb.org/mongo-driver/bson"
 )
 
 type RoomBasic struct {

@@ -3,14 +3,16 @@
 package service
 
 import (
-	"github.com/gin-gonic/gin"
-	"github.com/gorilla/websocket"
-	"im/define"
-	"im/helper"
-	"im/models"
 	"log"
 	"net/http"
 	"time"
+
+	"im/define"
+	"im/helper"
+	"im/models"
+
+	"github.com/gin-gonic/gin"
+	"github.com/gorilla/websocket"
 )
 
 var upgrader = websocket.Upgrader{}

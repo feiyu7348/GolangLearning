@@ -3,9 +3,11 @@
 package middlewares
 
 import (
-	"github.com/gin-gonic/gin"
-	"im/helper"
 	"net/http"
+
+	"im/helper"
+
+	"github.com/gin-gonic/gin"
 )
 
 func AuthCheck() gin.HandlerFunc {
