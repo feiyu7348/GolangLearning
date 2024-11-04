@@ -20,5 +20,6 @@ func EsConnect() {
 		fmt.Println(err)
 		return
 	}
+
 	global.ESClient = client
 }

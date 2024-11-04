@@ -4,13 +4,13 @@ package indexes
 
 import (
 	"context"
-	"es_study/global"
 	"fmt"
+
+	"es_study/global"
 )
 
 func DeleteIndex(index string) {
-	_, err := global.ESClient.
-		DeleteIndex(index).Do(context.Background())
+	_, err := global.ESClient.DeleteIndex(index).Do(context.Background())
 	if err != nil {
 		fmt.Println(err)
 		return

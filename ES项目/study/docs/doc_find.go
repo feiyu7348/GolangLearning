@@ -3,14 +3,16 @@
 package docs
 
 import (
+	"context"
+	"fmt"
+
 	"es_study/global"
 	"es_study/models"
-	"fmt"
+
 	"github.com/olivere/elastic/v7"
 )
 
 func DocFind() {
-
 	limit := 10
 	page := 1
 	from := (page - 1) * limit

@@ -3,9 +3,11 @@
 package docs
 
 import (
+	"context"
+	"fmt"
+
 	"es_study/global"
 	"es_study/models"
-	"fmt"
 )
 
 func DocUpdate() {
@@ -17,5 +19,6 @@ func DocUpdate() {
 		fmt.Println(err)
 		return
 	}
+
 	fmt.Printf("%#v\n", res)
 }

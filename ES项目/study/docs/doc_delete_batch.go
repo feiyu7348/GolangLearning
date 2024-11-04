@@ -4,9 +4,11 @@ package docs
 
 import (
 	"context"
+	"fmt"
+
 	"es_study/global"
 	"es_study/models"
-	"fmt"
+
 	"github.com/olivere/elastic/v7"
 )
 
@@ -25,5 +27,6 @@ func DocDeleteBatch() {
 		fmt.Println(err)
 		return
 	}
+
 	fmt.Println(res.Succeeded())
 }

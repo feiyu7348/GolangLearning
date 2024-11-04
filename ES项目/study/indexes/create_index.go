@@ -4,9 +4,10 @@ package indexes
 
 import (
 	"context"
+	"fmt"
+
 	"es_study/global"
 	"es_study/models"
-	"fmt"
 )
 
 func CreateIndex() {
@@ -16,12 +17,12 @@ func CreateIndex() {
 		DeleteIndex(index)
 	}
 
-	createIndex, err := global.ESClient.
-		CreateIndex(index).
+	createIndex, err := global.ESClient.CreateIndex(index).
 		BodyString(models.UserModel{}.Mapping()).Do(context.Background())
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
+
 	fmt.Println(createIndex.Index, "索引创建成功")
 }

@@ -4,10 +4,11 @@ package docs
 
 import (
 	"context"
-	"es_study/global"
-	"es_study/models"
 	"fmt"
 	"time"
+
+	"es_study/global"
+	"es_study/models"
 )
 
 func DocCreate() {
@@ -24,5 +25,6 @@ func DocCreate() {
 		fmt.Println(err)
 		return
 	}
+
 	fmt.Printf("%#v\n", indexResponse)
 }

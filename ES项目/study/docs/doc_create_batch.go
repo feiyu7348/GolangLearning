@@ -4,15 +4,16 @@ package docs
 
 import (
 	"context"
+	"fmt"
+	"time"
+
 	"es_study/global"
 	"es_study/models"
-	"fmt"
+
 	"github.com/olivere/elastic/v7"
-	"time"
 )
 
 func DocCreateBatch() {
-
 	list := []models.UserModel{
 		{
 			//ID:        13,
@@ -47,5 +48,6 @@ func DocCreateBatch() {
 		fmt.Println(err)
 		return
 	}
+
 	fmt.Println(res.Succeeded())
 }
