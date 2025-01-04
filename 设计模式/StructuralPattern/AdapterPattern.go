@@ -4,7 +4,7 @@ package StructuralPattern
 
 import "fmt"
 
-// 目标接口 https://developer.aliyun.com/article/1267988
+// 适配器模式 https://developer.aliyun.com/article/1267988
 
 type AudioPlayer interface {
 	Play(filename string)

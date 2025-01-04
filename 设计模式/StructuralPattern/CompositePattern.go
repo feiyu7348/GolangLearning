@@ -4,7 +4,7 @@ package StructuralPattern
 
 import "fmt"
 
-// 组合模式
+// 组合模式 https://developer.aliyun.com/article/1267994
 
 // 组件接口
 type Employee interface {
